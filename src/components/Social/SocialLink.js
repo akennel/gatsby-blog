@@ -18,6 +18,15 @@ const SocialLink = styled.a`
     width: 20px;
   }
 
+  img {
+    display: inline-block;
+    height: 20px;
+    margin-right: 5px;
+    stroke: #6e849c;
+    vertical-align: middle;
+    width: 20px;  
+  }
+
   &:hover {
     border-color: #3e465b;
   }
