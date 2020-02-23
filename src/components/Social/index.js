@@ -81,7 +81,30 @@ function Social({ website, twitter, github, linkedin }) {
           LinkedIn
         </SocialLink>
       )}
-    </Wrapper>
+      {train && (
+        <SocialLink href={train} target="_blank" rel="noopener">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M403.193,384.596c25.886-5.3,45.418-28.253,45.418-55.683V56.835C448.61,25.496,423.115,0,391.776,0h-271.55
+			C88.886,0,63.39,25.496,63.39,56.835v272.079c0,27.43,19.532,50.383,45.418,55.683L61.542,512h31.978l20.7-55.797h283.56
+			l20.7,55.797h31.977L403.193,384.596z M125.342,426.223l15.015-40.474h231.285l15.015,40.474H125.342z M391.776,355.768h-271.55
+			c-14.808,0-26.855-12.047-26.855-26.855V56.835c0-14.808,12.047-26.854,26.855-26.854h271.551
+			c14.808,0,26.855,12.047,26.855,26.854v272.079C418.63,343.722,406.583,355.768,391.776,355.768z />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+          Train
+        </SocialLink>
+      )}    </Wrapper>
   );
 }
 
