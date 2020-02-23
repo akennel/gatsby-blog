@@ -1,10 +1,10 @@
 ---
 title: Welcome to the Blog!
-date: "2018-07-01"
+date: "2020-02-23"
 featuredImage: './couple-banner.jpg'
 ---
 
-Welcome to the new blog, I hope you enjoy your stay! This is an example of how you can control what excerpt shows up.
+Welcome to the new blog, I hope you enjoy your stay!
 
 <!-- end -->
 
