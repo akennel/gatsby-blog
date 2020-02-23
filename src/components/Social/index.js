@@ -3,6 +3,8 @@ import React from 'react';
 import Wrapper from './Wrapper';
 import SocialLink from './SocialLink';
 
+import imgSrc from '../../SEPTAIcon.png';
+
 function Social({ website, twitter, github, linkedin, train }) {
   return (
     <Wrapper>
@@ -83,7 +85,7 @@ function Social({ website, twitter, github, linkedin, train }) {
       )}
       {train && (
         <SocialLink href={train} target="_blank" rel="noopener">       
-	   <img src="https://raw.githubusercontent.com/akennel/gatsby-blog/master/src/SEPTAIcon.png" />
+	   <img src={imgSrc} alt="Septa Train Schedule" />
 	   Train
         </SocialLink>
       )}    
