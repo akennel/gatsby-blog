@@ -82,8 +82,7 @@ function Social({ website, twitter, github, linkedin, train }) {
         </SocialLink>
       )}
       {train && (
-        <SocialLink href={train} target="_blank" rel="noopener">
-	<img src="https://raw.githubusercontent.com/akennel/gatsby-blog/master/src/SEPTAIcon.png" style="margin-right: 5px;" />        
+        <SocialLink href={train} target="_blank" rel="noopener">        
 	   Train
         </SocialLink>
       )}    
