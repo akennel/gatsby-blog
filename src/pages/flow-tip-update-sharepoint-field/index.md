@@ -3,7 +3,7 @@ title: MS Flow Tip - Updating field values in SharePoint without hard-coding the
 date: "2020-02-24"
 ---
 
-##A handy tip for using MS Flow and SharePoint when you don't want to hard-code the site's URL, but need to update a field value.
+A handy tip for using MS Flow and SharePoint when you don't want to hard-code the site's URL, but need to update a field value.
 
 <!-- end -->
 
