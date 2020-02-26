@@ -12,16 +12,25 @@ Last week I was asked to update the submit option on 5 of my old Infopath forms.
 I'd done something similar on another form recently, so I decided to adapt that code, and make it generic enough that I could use the resulting code for all 5 updates. What I've come up with is something that I plan to use as the basis of all my future forms.
 
 Here's what you need to do if you want to try it:  
+
 1) Create a Submit connection with the default name of "Main submit".  
+
 2) Create a Web Reference called ProfileService that points to /_vti_bin/UserProfileService.asmx on your server, ie [http://myserver/_vti_bin/UserProfileService.asmx](http://myserver/_vti_bin/UserProfileService.asmx)  
- 3) Create a reference to Microsoft.Sharepoint.DLL.
+
+3) Create a reference to Microsoft.Sharepoint.DLL.
 
 Your form will need the following:  
+
 1) FileName field: Used to hold the file name once the form is submitted, ie file – 01-01-2001.xsn. The file name is built using the Name field + the current date. If there are duplicates, we add +1 to the name, ie file-2 – 01-01-2001.xsn.  
- 2) Name field: This can be any text field, and is used to generate the file name. It should be a field that is likely to be unique, but we do check for duplicate filenames, so it doesn't have to be absolutely unique.   
-3) [Optional] Log field: Used to log changes to the form. My example form logs Creation, Submission, and Saves.   
+
+2) Name field: This can be any text field, and is used to generate the file name. It should be a field that is likely to be unique, but we do check for duplicate filenames, so it doesn't have to be absolutely unique.
+
+3) [Optional] Log field: Used to log changes to the form. My example form logs Creation, Submission, and Saves.
+
 4) [Optional] Errors field: Used to hold any errors that pop up. This example form just logs the error. In most of my real forms, when I encounter an error, I switch to a special Error view where I show the user what went wrong, and give them a button to report the error to our help desk.  
- 5) [Optional] FolderChoices field: Used to build the list of available folders. (This needs to be a repeating field)  
+
+5) [Optional] FolderChoices field: Used to build the list of available folders. (This needs to be a repeating field)  
+
 6) [Optional] SelectedFolder field: Grabs the name of the folder that the user has selected. (This should be a drop-down menu which gets its values from the FolderChoices field)
 
 Your form will need a Save button. Have that button call StartSaveSubmitForm(). The code will figure out whether the document has already been saved, and either generate a new file name and submit, or save to the existing document.
@@ -34,7 +43,7 @@ If you don't want to submit to a folder, set SubmitToFolder to False.
  If you don't want to use logging, comment out the references.  
  If you don't want to use error logging, comment out the references.
 
-Here is the code from a stripped down form using this option. 
+Here is the code from a stripped down form using this option.
 
 ```c
 using Microsoft.Office.InfoPath;  
@@ -64,7 +73,7 @@ namespace submitcode
 
  string fileName = "/my:myFields/my:FileName";  
  string libraryName = "Library"; //Name of the form Library we're submitting to  
- string folderChoicesFieldXPath = "/my:myFields/my:FolderChoices"; //XPath for the repeating field that will hold our folder choices   
+ string folderChoicesFieldXPath = "/my:myFields/my:FolderChoices"; //XPath for the repeating field that will hold our folder choices
  bool submitToFolder = true;//If you don't want to use folders, change this to false
 
  //////////////////////////////////////////////////////////////////////////////  
@@ -95,8 +104,8 @@ namespace submitcode
  //////////////////////////////////////////////////////////////////////////////
 
  string folderXPath = "/my:myFields/my:FolderPicker";//If you are submitting to a folder point to list, otherwise leave blank  
- string fileNameXPath = "/my:myFields/my:FileName";//The filename field used to set your form's name, IE: test – 01-01-2009.xsn   
- string nameXPath = "/my:myFields/my:NameField"; //The field used to generate the first part of the filename. The current date will be post-pended   
+ string fileNameXPath = "/my:myFields/my:FileName";//The filename field used to set your form's name, IE: test – 01-01-2009.xsn
+ string nameXPath = "/my:myFields/my:NameField"; //The field used to generate the first part of the filename. The current date will be post-pended
  string libraryName = "Library"; //Name of the Form Library  
  bool submitToFolder = true;//If you don't want to use folders, change this to false
 
@@ -113,7 +122,7 @@ namespace submitcode
  else //document has already been submitted, save changes  
  {  
  SaveForm(folderXPath, fileNameXPath, nameXPath, libraryName, submitToFolder);  
- } 
+ }
 
  }
 

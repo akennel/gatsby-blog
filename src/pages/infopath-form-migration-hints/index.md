@@ -11,99 +11,102 @@ Last week, my manager had me open a ticket with Microsoft to talk about Infopath
 
 Microsoft had some very good recommendations. I’ve taken what they suggested and applied it to a purchase requisition form I'm working on. It used to take me about 30 minutes to migrate my form to a new server. Now all it takes is a 1 minute re-publish. No other changes are necessary.
 
-**<span style="FONT-SIZE: 10pt">Data Sources</span>**<span style="FONT-SIZE: 10pt"></span>
+Data Sources
 
-<span style="FONT-SIZE: 10pt">With the exception of the Submit data source, I’m trying not to use these anymore on my own forms. Their major draw-back, in my opinion, is that you cannot tell what fields are using a Data Source without opening the Field Properties. When you have a few hundred fields, this quickly becomes annoying. </span>
+With the exception of the Submit data source, I’m trying not to use these anymore on my own forms. Their major draw-back, in my opinion, is that you cannot tell what fields are using a Data Source without opening the Field Properties. When you have a few hundred fields, this quickly becomes annoying.
 
-<span style="FONT-SIZE: 10pt">Begin by creating your Data Source as normal. Once it has been created, open Tools…Data Sources.</span>
+Begin by creating your Data Source as normal. Once it has been created, open Tools…Data Sources.
 
-<span style="FONT-SIZE: 10pt"></span>
+Select the Data Source and click the Convert button.
 
-<span style="FONT-SIZE: 10pt">Select the Data Source and click the Convert button.</span><span style="FONT-SIZE: 10pt"> </span>
+In the Window that pops up, you want to keep the Connection link type set to “Relative to Site Collection”
 
-<span style="FONT-SIZE: 10pt">In the Window that pops up, you want to keep the Connection link type set to “Relative to Site Collection”</span>
+Type in the following URL for the location [http://Server/DataConn/XXXXX](http://server/DataConn/XXXXX), where Server is the address of your Sharepoint Server, and DataConn is a Data Connection Library on that server.
 
-<span style="FONT-SIZE: 10pt">Type in the following URL for the location [http://Server/DataConn/XXXXX](http://server/DataConn/XXXXX), where Server is the address of your Sharepoint Server, and DataConn is a Data Connection Library on that server.</span>
+Make sure that XXXXX is unique for your form and your data source.
 
-<span style="FONT-SIZE: 10pt">Make sure that XXXXX is unique for your form and your data source.</span><span style="FONT-SIZE: 10pt"> </span>
+That “Relative to site collection option” means that your form will look for a Library called DataConn in the root of whatever site it finds itself on. This is what lets us move our forms from server to server.  
 
-<span style="FONT-SIZE: 10pt">That “Relative to site collection option” means that your form will look for a Library called DataConn in the root of whatever site it finds itself on. This is what lets us move our forms from server to server. </span><span style="FONT-SIZE: 10pt"> </span>
+Click OK and your Data Source will be converted into a file and uploaded to the DataConn library.
 
-<span style="FONT-SIZE: 10pt">Click OK and your Data Source will be converted into a file and uploaded to the DataConn library. </span>
+The DataConn library requires that new documents are Approved before they can be referenced. Browse to the Library, find your new document and use the context menu to approve it.
 
-<span style="FONT-SIZE: 10pt"></span><span style="FONT-SIZE: 10pt">The DataConn library requires that new documents are Approved before they can be referenced. Browse to the Library, find your new document and use the context menu to approve it.</span>
+We now need to copy our new Data Source file to other servers where we want to use our form.
 
-<span style="FONT-SIZE: 10pt"></span>
+Begin by downloading a copy of the file. Before we upload the file to the new server, we need to modify it so that the Data Source is pointed to the new server. Luckily, the Data Source is just an XML file. Open it using Notepad or any other Text Editor.
 
-<span style="FONT-SIZE: 10pt">We now need to copy our new Data Source file to other servers where we want to use our form.</span><span style="FONT-SIZE: 10pt"> </span>
+You’ll find that the references to the server are easy to find. I’ve high-lighted them below. Just change the references to the correct server path and save your changes.
 
-<span style="FONT-SIZE: 10pt">Begin by downloading a copy of the file. Before we upload the file to the new server, we need to modify it so that the Data Source is pointed to the new server. Luckily, the Data Source is just an XML file. Open it using Notepad or any other Text Editor.</span><span style="FONT-SIZE: 10pt"> </span>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 
-<span style="FONT-SIZE: 10pt">You’ll find that the references to the server are easy to find. I’ve high-lighted them below. Just change the references to the correct server path and save your changes. </span>
+<?MicrosoftWindowsSharePointServices ContentTypeID="0x010100B4CBD48E029A4ad8B62CB0E41868F2B0"?>
 
-<span style="FONT-SIZE: 10pt"> </span>
+<udc:DataSource MajorVersion="2" MinorVersion="0" xmlns:udc="[http://schemas.microsoft.com/office/infopath/2006/udc](http://schemas.microsoft.com/office/infopath/2006/udc)">
 
-<span style="FONT-SIZE: 8pt"><?xml version="1.0" encoding="UTF-8"?></span>
+ <udc:Name>Main submit</udc:Name>
 
-<span style="FONT-SIZE: 8pt"><?MicrosoftWindowsSharePointServices ContentTypeID="0x010100B4CBD48E029A4ad8B62CB0E41868F2B0"?></span>
+ <udc:Description>Format: UDC V2; Connection Type: SharePointLibrary; Purpose: WriteOnly; Generated by Microsoft Office InfoPath 2007 on 2009-07-06 at 15:03:35 by CORPkenna.</udc:Description>
 
-<span style="FONT-SIZE: 8pt"><udc:DataSource MajorVersion="2" MinorVersion="0" xmlns:udc="[http://schemas.microsoft.com/office/infopath/2006/udc](http://schemas.microsoft.com/office/infopath/2006/udc)"></span>
+ <udc:Type MajorVersion="2" MinorVersion="0" Type="SharePointLibrary">
 
-<span style="FONT-SIZE: 8pt"> <udc:Name>Main submit</udc:Name></span>
+ <udc:SubType MajorVersion="0" MinorVersion="0" Type=""/>
 
-<span style="FONT-SIZE: 8pt"> <udc:Description>Format: UDC V2; Connection Type: SharePointLibrary; Purpose: WriteOnly; Generated by Microsoft Office InfoPath 2007 on 2009-07-06 at 15:03:35 by CORPkenna.</udc:Description></span>
+ </udc:Type>
 
-<span style="FONT-SIZE: 8pt"> <udc:Type MajorVersion="2" MinorVersion="0" Type="SharePointLibrary"></span>
+ <udc:ConnectionInfo Purpose="WriteOnly" AltDataSource="">
 
-<span style="FONT-SIZE: 8pt"> <udc:SubType MajorVersion="0" MinorVersion="0" Type=""/></span>
+ <udc:WsdlUrl/>
 
-<span style="FONT-SIZE: 8pt"> </udc:Type></span>
+ <udc:SelectCommand>
 
-<span style="FONT-SIZE: 8pt"> <udc:ConnectionInfo Purpose="WriteOnly" AltDataSource=""></span>
+ <udc:ListId/>
 
-<span style="FONT-SIZE: 8pt"> <udc:WsdlUrl/></span>
+ <udc:WebUrl/>
 
-<span style="FONT-SIZE: 8pt"> <udc:SelectCommand></span>
+ <udc:ConnectionString/>
 
-<span style="FONT-SIZE: 8pt"> <udc:ListId/></span>
+ <udc:ServiceUrl UseFormsServiceProxy="false"/>
 
-<span style="FONT-SIZE: 8pt"> <udc:WebUrl/></span>
+ <udc:SoapAction/>
 
-<span style="FONT-SIZE: 8pt"> <udc:ConnectionString/></span>
+ <udc:Query/>
 
-<span style="FONT-SIZE: 8pt"> <udc:ServiceUrl UseFormsServiceProxy="false"/></span>
+ </udc:SelectCommand>
 
-<span style="FONT-SIZE: 8pt"> <udc:SoapAction/></span>
+ <udc:UpdateCommand>
 
-<span style="FONT-SIZE: 8pt"> <udc:Query/></span>
+ <udc:ServiceUrl UseFormsServiceProxy="false"/>
 
-<span style="FONT-SIZE: 8pt"> </udc:SelectCommand></span>
+ <udc:SoapAction/>
 
-<span style="FONT-SIZE: 8pt"> <udc:UpdateCommand></span>
+ <udc:Submit/>
 
-<span style="FONT-SIZE: 8pt"> <udc:ServiceUrl UseFormsServiceProxy="false"/></span>
+ <udc:FileName>Specify a filename or formula</udc:FileName>
 
-<span style="FONT-SIZE: 8pt"> <udc:SoapAction/></span>
+ <span style="COLOR: #c0504d"><udc:FolderName AllowOverwrite="0">[http://serverAddress/LibraryName](http://serveraddress/LibraryName)</udc:FolderName>
 
-<span style="FONT-SIZE: 8pt"> <udc:Submit/></span>
+ </udc:UpdateCommand>
 
-<span style="FONT-SIZE: 8pt"> <udc:FileName>Specify a filename or formula</udc:FileName></span>
+ <!–udc:Authentication><udc:SSO AppId='' CredentialType='' /></udc:Authentication–>
 
-<span style="FONT-SIZE: 8pt"> <span style="COLOR: #c0504d"><udc:FolderName AllowOverwrite="0">[http://serverAddress/LibraryName](http://serveraddress/LibraryName)</udc:FolderName></span></span>
+ </udc:ConnectionInfo>
 
-<span style="FONT-SIZE: 8pt"> </udc:UpdateCommand></span>
+</udc:DataSource>
+```
 
-<span style="FONT-SIZE: 8pt"> <!–udc:Authentication><udc:SSO AppId='' CredentialType='' /></udc:Authentication–></span>
+This example is for a Submit Data Source. Other Data Sources will look slightly different, and may have more than one field that needs updating. If you’re pulling data from a List, you may need to know the List GUID.  
 
-<span style="FONT-SIZE: 8pt"> </udc:ConnectionInfo></span>
+ Now that you have your Data Source file updated, you just need to upload it the DataConn library on the new server and Approve it. Repeat for each server that you need to use your form on.
 
-<span style="FONT-SIZE: 8pt"></udc:DataSource></span>
+## Web References in Code-Behind
 
-<span style="FONT-SIZE: 10pt">This example is for a Submit Data Source. Other Data Sources will look slightly different, and may have more than one field that needs updating. If you’re pulling data from a List, you may need to know the List GUID. </span><span style="FONT-SIZE: 10pt"> </span>
+ Next up were Web References being used with code-behind in our forms. It turns out that these references can be easily fixed with a single additional line of code.   Begin by creating your Web Reference as usual. Once created, take a look at the Web Reference properties. You'll see the URL being referenced. This is what we'll need to update on the new server. In the case of my Purchase Req form, I’m calling the UserGroup web service that comes standard with Sharepoint. The URL that is referenced, /_vti_bin/usergroup.asmx, will exist on any Sharepoint server.
 
-<p><span style="FONT-SIZE: 10pt"></span></p> <p><span style="FONT-SIZE: 10pt">Now that you have your Data Source file updated, you just need to upload it the DataConn library on the new server and Approve it. Repeat for each server that you need to use your form on.</span><span style="FONT-SIZE: 10pt"> </span> </p> <p>**<span style="FONT-SIZE: 10pt">Web References in Code-Behind</span>**</p> <p><span style="FONT-SIZE: 10pt">Next up were Web References being used with code-behind in our forms. It turns out that these references can be easily fixed with a single additional line of code. </span><span style="FONT-SIZE: 10pt"> </span></p> <p><span style="FONT-SIZE: 10pt">Begin by creating your Web Reference as usual. Once created, take a look at the Web Reference properties. You'll see the URL being referenced. This is what we'll need to update on the new server.</span></p> <p><span style="FONT-SIZE: 10pt"></span><span style="FONT-SIZE: 10pt">In the case of my Purchase Req form, I’m calling the UserGroup web service that comes standard with Sharepoint. The URL that is referenced, /_vti_bin/usergroup.asmx, will exist on any Sharepoint server.</span><span style="FONT-SIZE: 10pt"> </span></p> <p><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 10pt">//Open current Site</span></p> <p><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 10pt">using</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> (<span style="COLOR: teal">SPSite</span> mySite = <span style="COLOR: teal">SPContext</span>.Current.Site){<span style="COLOR: green"></span></span></p> <p><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 10pt">//Create Web Reference</span></p> <p><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">GetGroupMembers.<span style="COLOR: teal">UserGroup</span> getUsersFromGroup = <span style="COLOR: blue">new</span> GetGroupMembers.<span style="COLOR: teal">UserGroup</span>();</span></p> <p><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 10pt">//Redirect URL</span></p> <p><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">getUsersFromGroup.Url = mySite.Url.ToString() + <span style="COLOR: maroon">"/_vti_bin/usergroup.asmx"</span>;}</span></p> 
-
-
-
-
-
+```c
+using
+(SPSite mySite = SPContext.Current.Site){
+//Create Web Reference
+GetGroupMembers.UserGroup getUsersFromGroup = new GetGroupMembers.UserGroup();
+//Redirect URL getUsersFromGroup.Url = mySite.Url.ToString() + "/_vti_bin/usergroup.asmx";}
+```
