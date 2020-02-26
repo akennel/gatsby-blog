@@ -5,7 +5,6 @@ date: 2009-10-05
 
 Last week I was asked to update the submit option on 5 of my old Infopath forms. Originally these forms just used the built in Save button on the toolbar. I was asked to give the user a menu to choose their hospital, and then submit the document to a matching folder. I'd done something…
 
-
 <!-- end -->
 
 Last week I was asked to update the submit option on 5 of my old Infopath forms.  Originally these forms just used the built in Save button on the toolbar.  I was asked to give the user a menu to choose their hospital, and then submit the document to a matching folder.
@@ -37,6 +36,7 @@ If you don't want to submit to a folder, set SubmitToFolder to False.
 
 Here is the code from a stripped down form using this option. 
 
+```c
 using Microsoft.Office.InfoPath;  
 using System;  
 using System.Windows.Forms;  
@@ -113,7 +113,8 @@ namespace submitcode
  else //document has already been submitted, save changes  
  {  
  SaveForm(folderXPath, fileNameXPath, nameXPath, libraryName, submitToFolder);  
- }   
+ } 
+
  }
 
  private void LogComment(string comment)  
@@ -407,7 +408,4 @@ namespace submitcode
 
  }  
 }
-
- 
-
-
+```

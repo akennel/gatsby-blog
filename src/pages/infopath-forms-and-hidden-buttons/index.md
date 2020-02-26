@@ -12,19 +12,19 @@ I’ve been building some forms for a site called Emergency Preparedness this we
 
 <div dir="ltr">
 <span style="font-family:sans-serif;font-size:85%;">I started by creating two new fields for my form called NewDocument and FileName.  I didn’t add these to the layout of the form, so they won’t appear when creating a document.  Next I added two buttons, side by side at the bottom of the form, one labelled Submit, the other Save Changes.</span>  
-[![](http://turtlemafia.org/wp-content/uploads/2008/09/noname.gif)](http://turtlemafia.org/wp-content/uploads/2008/09/noname.gif)
+[![](./noname.gif)](https://turtlemafia.org/wp-content/uploads/2008/09/noname.gif)
 
 <span style="font-family:sans-serif;font-size:85%;">I set the Submit button to be invisible when the field NewDocument was</span><span style="font-family:sans-serif;font-size:85%;"> set to “No”. I set the Sav</span><span style="font-family:sans-serif;font-size:85%;">e Change button to be invisible when the field NewDocument was set to anything other than “No”.</span>  
-[![](http://turtlemafia.org/wp-content/uploads/2008/09/2-300x61.gif)](http://turtlemafia.org/wp-content/uploads/2008/09/2.gif)
+[![](./2-300x61.gif)](https://turtlemafia.org/wp-content/uploads/2008/09/2.gif)
 
 <span style="font-family:sans-serif;font-size:85%;">I then created a submit option for the form that pointed to the document library I wanted to use, and set the file name to value of the field FileName. I made sure to check the Allow overwrite if file exists box.</span>  
-[![](http://turtlemafia.org/wp-content/uploads/2008/09/3-300x81.gif)](http://turtlemafia.org/wp-content/uploads/2008/09/3.gif)
+[![](./3-300x81.gif)](https://turtlemafia.org/wp-content/uploads/2008/09/3.gif)
 
 <span style="font-family:sans-serif;font-size:85%;">Now it was time to wire up the buttons. On the Submit button, I set the following </span><span style="font-family:sans-serif;font-size:85%;">rules:</span>  
-[![](http://turtlemafia.org/wp-content/uploads/2008/09/4.gif)](http://turtlemafia.org/wp-content/uploads/2008/09/4.gif)
+[![](./4.gif)](https://turtlemafia.org/wp-content/uploads/2008/09/4.gif)
 
 <span style="font-family:sans-serif;font-size:85%;">Notice that clicking this button sets the FileName field to the current date+time. I’ll probably up</span><span style="font-family:sans-serif;font-size:85%;">date this to include some information from other fields or the submitter’s name, but using the now() option ensures I get a unique file name. The button then sets the NewDocument field to No and then submits the form using the submit option I’ve already created.</span>  
-[![](http://turtlemafia.org/wp-content/uploads/2008/09/5.gif)](http://turtlemafia.org/wp-content/uploads/2008/09/5.gif)
+[![](./5.gif)](https://turtlemafia.org/wp-content/uploads/2008/09/5.gif)
 
 <span style="font-family:sans-serif;font-size:85%;">Less happens on the Save Changes button because all we’re doing is saving an existing document. Remember that our Submit option pulls the name of the file from the field FileName. This field was set when the document was first created, so we end up using the same file name…which means that we overwrite the existing file.</span>
 

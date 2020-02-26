@@ -7,7 +7,7 @@ I just posted a new tool on the CodePlex this afternoon. Here's a link: [http://
 
 <!-- end -->
 
-I just posted a new tool on the CodePlex this afternoon.  Here's a link: [http://spgroupsynch.codeplex.com/](http://spgroupsynch.codeplex.com/)
+I just posted a new tool on the CodePlex this afternoon.  Here's a lin: [http://spgroupsynch.codeplex.com/](http://spgroupsynch.codeplex.com/)
 
 The tool synchronizes groups between Site Collections in Sharepoint.  You show it a Site Collection to start from, it pulls all the Groups and Group Membership and then copies it over to another Site Collection.  It's a one-way push only, although you could get that if you run the tool again with the To and From sites reversed now that I think about it.
 

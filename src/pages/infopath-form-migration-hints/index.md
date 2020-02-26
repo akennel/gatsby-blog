@@ -5,17 +5,11 @@ date: 2009-07-06
 
 Last week, my manager had me open a ticket with Microsoft to talk about Infopath form migration. We’ve been finding that it is time-consuming to migrate a form designed on the test server to the staging or production servers. Microsoft had some very good recommendations. I’ve taken what they suggested and applied it to a…
 
-
 <!-- end -->
 
+Last week, my manager had me open a ticket with Microsoft to talk about Infopath form migration. We’ve been finding that it is time-consuming to migrate a form designed on the test server to the staging or production servers.
 
-<div lang="EN-US" vlink="purple" link="blue">
-
-
-
-<span style="FONT-SIZE: 10pt">Last week, my manager had me open a ticket with Microsoft to talk about Infopath form migration. We’ve been finding that it is time-consuming to migrate a form designed on the test server to the staging or production servers. </span><span style="FONT-SIZE: 10pt"> </span>
-
-<span style="FONT-SIZE: 10pt">Microsoft had some very good recommendations. I’ve taken what they suggested and applied it to a purchase requisition form I'm working on. </span><span style="FONT-SIZE: 10pt">It used to take me about 30 minutes to migrate my form to a new server. Now all it takes is a 1 minute re-publish. No other changes are necessary.</span><span style="FONT-SIZE: 10pt"> </span>
+Microsoft had some very good recommendations. I’ve taken what they suggested and applied it to a purchase requisition form I'm working on. It used to take me about 30 minutes to migrate my form to a new server. Now all it takes is a 1 minute re-publish. No other changes are necessary.
 
 **<span style="FONT-SIZE: 10pt">Data Sources</span>**<span style="FONT-SIZE: 10pt"></span>
 
@@ -32,8 +26,6 @@ Last week, my manager had me open a ticket with Microsoft to talk about Infopath
 <span style="FONT-SIZE: 10pt">Type in the following URL for the location [http://Server/DataConn/XXXXX](http://server/DataConn/XXXXX), where Server is the address of your Sharepoint Server, and DataConn is a Data Connection Library on that server.</span>
 
 <span style="FONT-SIZE: 10pt">Make sure that XXXXX is unique for your form and your data source.</span><span style="FONT-SIZE: 10pt"> </span>
-
-<span style="FONT-SIZE: 10pt">![](cid:image005.png@01C9FE49.DB2B8560)</span>
 
 <span style="FONT-SIZE: 10pt">That “Relative to site collection option” means that your form will look for a Library called DataConn in the root of whatever site it finds itself on. This is what lets us move our forms from server to server. </span><span style="FONT-SIZE: 10pt"> </span>
 

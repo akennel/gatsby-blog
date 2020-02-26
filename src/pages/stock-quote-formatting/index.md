@@ -8,7 +8,7 @@ I took a look at the code behind the stock quote Web Part yesterday. I noticed t
 
 <!-- end -->
 
-[![](http://turtlemafia.org/wp-content/uploads/2008/02/stock.png)](http://turtlemafia.org/wp-content/uploads/2008/02/stock.png)I took a look at the code behind the stock quote Web Part yesterday. I noticed that the text was formatted with HTML tags, and wondered if there was anything I could do to improve the formatting.
+[![](./stock.png)](https://turtlemafia.org/wp-content/uploads/2008/02/stock.png)I took a look at the code behind the stock quote Web Part yesterday. I noticed that the text was formatted with HTML tags, and wondered if there was anything I could do to improve the formatting.
 
 
 A quick look at the vendor’s web site, turned up a few examples, along with a list of available information. I used this to tweak the current display, mostly by adding a % change line.  

@@ -8,7 +8,7 @@ We’re resizing the menu bar to make it smaller. This means that some of the gr
 
 <!-- end -->
 
-[![](http://turtlemafia.org/wp-content/uploads/2008/02/uhs-mainnav-outer-left.png)](http://turtlemafia.org/wp-content/uploads/2008/02/uhs-mainnav-outer-left.png)We’re resizing the menu bar to make it smaller. This means that some of the graphics need to be shrunk accordingly. Two in particular that stick out (literally) are the end caps. These graphics give the menu nicely curved sides.
+[![](./uhs-mainnav-outer-left.png)](https://turtlemafia.org/wp-content/uploads/2008/02/uhs-mainnav-outer-left.png)We’re resizing the menu bar to make it smaller. This means that some of the graphics need to be shrunk accordingly. Two in particular that stick out (literally) are the end caps. These graphics give the menu nicely curved sides.
 
 Once again, I was volunteered to make the change. I started work yesterday afternoon and got absolutely nowhere. I was using my favorite tool, Paint.net, and for the first time, ran into something a little too complex for what is basically an advanced version of MS Paint.
 
@@ -20,5 +20,5 @@ The colors were still off at that point, so I pulled up a screen shot of the sma
 
 Once my adjustments had been made, I used the pngcrush tool I mentioned in an earlier post to protect the files from IE. Since the left and right graphics were mirror images, I just worked on the left graphic, then flipped it to make the right graphic.
 
-Once uploaded to the site, my new graphics meshed perfectly. Even zoomed in you cannot see a break.[](http://bp1.blogger.com/_CkvVbJNTM4g/R7RgeeaCCEI/AAAAAAAAACo/QV9WjPa41kw/s1600-h/uhs-mainnav-outer-right.png)
+Once uploaded to the site, my new graphics meshed perfectly. Even zoomed in you cannot see a break.[](https://bp1.blogger.com/_CkvVbJNTM4g/R7RgeeaCCEI/AAAAAAAAACo/QV9WjPa41kw/s1600-h/uhs-mainnav-outer-right.png)
 
