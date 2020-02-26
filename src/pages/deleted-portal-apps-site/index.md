@@ -8,9 +8,9 @@ I created portal-apps.uhsinc.biz as a seperate web app to host our applications.
 
 <!-- end -->
 
-<div>
-<div>I created portal-apps.uhsinc.biz as a seperate web app to host our  applications.  Originally, we thought it best to segregate this applications on  their own web app for quota and backend storage reasons.</div>
-<div> </div>
-<div>These reasons turned out not to matter after all, so we migrated the few  applications that has been created on portal-apps over to portal.  Since the  site was empty, I’ve deleted it.</div>
-</div>
+
+I created portal-apps.uhsinc.biz as a seperate web app to host our  applications.  Originally, we thought it best to segregate this applications on  their own web app for quota and backend storage reasons.
+ 
+These reasons turned out not to matter after all, so we migrated the few  applications that has been created on portal-apps over to portal.  Since the  site was empty, I’ve deleted it.
+
 

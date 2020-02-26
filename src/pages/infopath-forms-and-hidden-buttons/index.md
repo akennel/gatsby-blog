@@ -11,7 +11,7 @@ I’ve been building some forms for a site called Emergency Preparedness this we
 <span style="font-family:sans-serif;font-size:85%;">I’ve been building som</span><span style="font-family:sans-serif;font-size:85%;">e forms for a site called Emergency Preparedness this week. One of the things I wanted to do with the form was get rid of the button bar at the top and bottom and replac</span><span style="font-family:sans-serif;font-size:85%;">e them with a couple of simple buttons. I decided I wanted a button that said Submit when someone first created out a document, and Save Changes when they were editing an existing document. It wasn’t immediately obvious how to do this, so I wanted to write down how I accomplished it.</span>
 
 <div dir="ltr">
-<div><span style="font-family:sans-serif;font-size:85%;">I started by creating two new fields for my form called NewDocument and FileName.  I didn’t add these to the layout of the form, so they won’t appear when creating a document.  Next I added two buttons, side by side at the bottom of the form, one labelled Submit, the other Save Changes.</span>  
+<span style="font-family:sans-serif;font-size:85%;">I started by creating two new fields for my form called NewDocument and FileName.  I didn’t add these to the layout of the form, so they won’t appear when creating a document.  Next I added two buttons, side by side at the bottom of the form, one labelled Submit, the other Save Changes.</span>  
 [![](http://turtlemafia.org/wp-content/uploads/2008/09/noname.gif)](http://turtlemafia.org/wp-content/uploads/2008/09/noname.gif)
 
 <span style="font-family:sans-serif;font-size:85%;">I set the Submit button to be invisible when the field NewDocument was</span><span style="font-family:sans-serif;font-size:85%;"> set to “No”. I set the Sav</span><span style="font-family:sans-serif;font-size:85%;">e Change button to be invisible when the field NewDocument was set to anything other than “No”.</span>  
@@ -31,8 +31,8 @@ I’ve been building some forms for a site called Emergency Preparedness this we
 <span style="font-family:sans-serif;font-size:85%;">So we end up with a form that displays the Submit button when it is first created, and Save Changes every time it is opened after that. </span>  
 <span style="font-family:sans-serif;font-size:85%;">This isn’t the only way to do this, of course. You could create a single button, and then use conditional formatting to change the text shown on the button, and the rules that run when the button is pressed. For that matter, I don’t really need the NewDocument field, instead I could key off of whether the FileName field was blank. </span>
 
-<span style="font-family:sans-serif;font-size:85%;">But, I like this approach because it is simple, and easy to follow.  It should be easy for anyone to look at it and figure out how it all works if something needs to be updated in the future.</span></div>
+<span style="font-family:sans-serif;font-size:85%;">But, I like this approach because it is simple, and easy to follow.  It should be easy for anyone to look at it and figure out how it all works if something needs to be updated in the future.</span>
 
 
-</div>
+
 

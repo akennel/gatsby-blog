@@ -8,5 +8,5 @@ Finally got images in the correct size from J. I uploaded them this morning, and
 
 <!-- end -->
 
-<div>Finally got images in the correct size from J.  I uploaded them  this morning, and everything looks good.</div>
+Finally got images in the correct size from J.  I uploaded them  this morning, and everything looks good.
 

@@ -14,5 +14,5 @@ I set up our test server to check for dead sites to generate an example email. 
 
 After a bit of searching, I found the file that is used to generate the site warning.  It's called DEADWEB.XML and is located under the 12 hive in TEMPLATE1033XML.  The file is just a simple XML, and I was quickly able to find the text of the message that gets sent out.  I edited the following line for clarification:  "If the site is not being used, please go to SITE, and select "Delete This Site" to remove the Web site. This is the last option listed under the Site Administration column."
 
-The notices should run again tonight.  We'll see if my change works as expected then.</div>
+The notices should run again tonight.  We'll see if my change works as expected then.
 

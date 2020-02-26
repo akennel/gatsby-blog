@@ -72,5 +72,5 @@ public partial class RandomImage : System.Web.UI.UserControl
 
         }  
     }  
-}</div>
+}
 

@@ -8,7 +8,7 @@ Last week I was asked to update the submit option on 5 of my old Infopath forms.
 
 <!-- end -->
 
-<div>Last week I was asked to update the submit option on 5 of my old Infopath forms.  Originally these forms just used the built in Save button on the toolbar.  I was asked to give the user a menu to choose their hospital, and then submit the document to a matching folder.
+Last week I was asked to update the submit option on 5 of my old Infopath forms.  Originally these forms just used the built in Save button on the toolbar.  I was asked to give the user a menu to choose their hospital, and then submit the document to a matching folder.
 
 I'd done something similar on another form recently, so I decided to adapt that code, and make it generic enough that I could use the resulting code for all 5 updates. What I've come up with is something that I plan to use as the basis of all my future forms.
 
@@ -408,6 +408,6 @@ namespace submitcode
  }  
 }
 
- </div>
+ 
 
 

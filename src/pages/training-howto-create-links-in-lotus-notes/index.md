@@ -10,12 +10,12 @@ I had a training session today with a new employee. She is the new Admin Assista
 
 I had a training session today with a new employee. She is the new Admin Assistant to the #2 person in the company. It’s a rather important position, so I spent more time than I normally would on a simple training session like this. 
 
-<div> </div>
-<div>I walked her through the basics of email and calendar, with an emphasis on  the calendar, and stressed that she should call with any problems.</div>
-<div> </div>
-<div>Later in the day, she did call with a list of databases she wanted access  to.  I took the opportunity in my reply to illustrate how Document and Database  links were created.  Here’s a copy of that section of my reply:</div>
-<div> </div>
-<div><span style=";font-family:Helv;font-size:85%;"> </span>
+ 
+I walked her through the basics of email and calendar, with an emphasis on  the calendar, and stressed that she should call with any problems.
+ 
+Later in the day, she did call with a list of databases she wanted access  to.  I took the opportunity in my reply to illustrate how Document and Database  links were created.  Here’s a copy of that section of my reply:
+ 
+<span style=";font-family:Helv;font-size:85%;"> </span>
 
 <span style=";font-family:Helv;font-size:85%;">You start by opening the database/document you want to link to.</span>
 
@@ -39,5 +39,5 @@ I had a training session today with a new employee. She is the new Admin Assista
 
 <span style=";font-family:Helv;font-size:85%;">There is also another type of link called a View link. This opens a specific view in an application, for example Purchases Pending Approval in a Purchase Requisition system. A view link looks like this:</span>[![](http://turtlemafia.org/wp-content/uploads/2008/03/viewlink.png)](http://turtlemafia.org/wp-content/uploads/2008/03/viewlink.png)
 
-</div>
+
 

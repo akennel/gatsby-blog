@@ -8,9 +8,9 @@ Last week, my manager had me open a ticket with Microsoft to talk about Infopath
 
 <!-- end -->
 
-<div>
+
 <div lang="EN-US" vlink="purple" link="blue">
-<div>
+
 
 
 <span style="FONT-SIZE: 10pt">Last week, my manager had me open a ticket with Microsoft to talk about Infopath form migration. We’ve been finding that it is time-consuming to migrate a form designed on the test server to the staging or production servers. </span><span style="FONT-SIZE: 10pt"> </span>
@@ -111,7 +111,7 @@ Last week, my manager had me open a ticket with Microsoft to talk about Infopath
 
 <p><span style="FONT-SIZE: 10pt"></span></p> <p><span style="FONT-SIZE: 10pt">Now that you have your Data Source file updated, you just need to upload it the DataConn library on the new server and Approve it. Repeat for each server that you need to use your form on.</span><span style="FONT-SIZE: 10pt"> </span> </p> <p>**<span style="FONT-SIZE: 10pt">Web References in Code-Behind</span>**</p> <p><span style="FONT-SIZE: 10pt">Next up were Web References being used with code-behind in our forms. It turns out that these references can be easily fixed with a single additional line of code. </span><span style="FONT-SIZE: 10pt"> </span></p> <p><span style="FONT-SIZE: 10pt">Begin by creating your Web Reference as usual. Once created, take a look at the Web Reference properties. You'll see the URL being referenced. This is what we'll need to update on the new server.</span></p> <p><span style="FONT-SIZE: 10pt"></span><span style="FONT-SIZE: 10pt">In the case of my Purchase Req form, I’m calling the UserGroup web service that comes standard with Sharepoint. The URL that is referenced, /_vti_bin/usergroup.asmx, will exist on any Sharepoint server.</span><span style="FONT-SIZE: 10pt"> </span></p> <p><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 10pt">//Open current Site</span></p> <p><span style="FONT-FAMILY: 'Courier New'; COLOR: blue; FONT-SIZE: 10pt">using</span><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt"> (<span style="COLOR: teal">SPSite</span> mySite = <span style="COLOR: teal">SPContext</span>.Current.Site){<span style="COLOR: green"></span></span></p> <p><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 10pt">//Create Web Reference</span></p> <p><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">GetGroupMembers.<span style="COLOR: teal">UserGroup</span> getUsersFromGroup = <span style="COLOR: blue">new</span> GetGroupMembers.<span style="COLOR: teal">UserGroup</span>();</span></p> <p><span style="FONT-FAMILY: 'Courier New'; COLOR: green; FONT-SIZE: 10pt">//Redirect URL</span></p> <p><span style="FONT-FAMILY: 'Courier New'; FONT-SIZE: 10pt">getUsersFromGroup.Url = mySite.Url.ToString() + <span style="COLOR: maroon">"/_vti_bin/usergroup.asmx"</span>;}</span></p> 
 
-</div>
-</div>
-</div>
+
+
+
 

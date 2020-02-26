@@ -12,5 +12,5 @@ D asked me today whether it was possible to show a user only the documents they 
 
 It turns out this option only appears only if your List or Document Library has unique permissions.  If it is inheriting permissions from the parent site, the settings appear to be inaccessible. 
 
-Once you've gotten unique permissions, the option appears under Advanced Settings on the List Settings screen.  You also have the ability to only allow users to edit their own documents, both very nice options to have. </div>
+Once you've gotten unique permissions, the option appears under Advanced Settings on the List Settings screen.  You also have the ability to only allow users to edit their own documents, both very nice options to have. 
 

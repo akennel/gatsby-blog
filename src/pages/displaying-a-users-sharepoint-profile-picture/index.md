@@ -8,9 +8,9 @@ This week I was building a web part and needed to display the profile picture fo
 
 <!-- end -->
 
-<div>This week I was building a web part and needed to display the profile picture for a user.  I figured this would be easy enough to do, but as is usually the case with Sharepoint, I was wrong.  Several hours and multiple Google searches later, I put together a neat solution:</div>
-<div> </div>
-<div><span style="font-size:85%;"> 
+This week I was building a web part and needed to display the profile picture for a user.  I figured this would be easy enough to do, but as is usually the case with Sharepoint, I was wrong.  Several hours and multiple Google searches later, I put together a neat solution:
+ 
+<span style="font-size:85%;"> 
 
 </span><span style="color: rgb(43, 145, 175);font-size:85%;"><span style="color: rgb(43, 145, 175);font-size:85%;">UserProfileManager</span></span><span style="font-size:85%;"> profileManager = </span><span style="color: rgb(51, 51, 51);font-size:85%;"><span style="color: rgb(0, 0, 255);font-size:85%;">new</span></span><span style="color: rgb(51, 51, 51);font-size:85%;"> </span><span style="color: rgb(43, 145, 175);font-size:85%;"><span style="color: rgb(43, 145, 175);font-size:85%;">UserProfileManager</span></span><span style="font-size:85%;">();</span> 
 
@@ -36,5 +36,5 @@ pictureURL = <span style="color: rgb(163, 21, 21);font-size:85%;"><span style="c
 
 }
 
-</span></div>
+</span>
 

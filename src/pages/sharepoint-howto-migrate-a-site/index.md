@@ -1,5 +1,5 @@
 ---
-title: Sharepoint Howto Migrate a site
+title: Sharepoint Howto - Migrate a site
 date: 2008-03-05
 ---
 
@@ -12,7 +12,6 @@ I know of two ways to migrate a site: using the stsadm command line tool, and us
 There are two steps to migrating a site, exporting and importing. You begin by exporting the site you wish to move. Here is the command for this as I usually use it:  
 
 ```cmd
-
 stsadm -o export -url http://somesite.com/site -filename c:exportfilename -includeusersecurity  
 ```
 
@@ -25,10 +24,8 @@ If you’re migrating to a new physical server, you need to copy all the .cmp fi
 Before you can import your site, you need to have an empty site of the same type already created. Just create a site with the Title and URL you want to use via the Site Actions menu on the browser. The template has to be the same as the template used to create the original site. This means that any custom templates you’ve created need to be installed on the new server before you can migrate anything.
 
 Once your empty site is created, the import process is basically a mirror image of the export.  
-The command I usually use is:  
+The command I usually use is:
 
 ```cmd
-
 stsadm -o import -url http://newsite.com/site -filename c:importexportfile.cmp -includeusersecurity
-
 ```

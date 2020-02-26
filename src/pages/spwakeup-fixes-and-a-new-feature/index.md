@@ -15,5 +15,5 @@ I’ve also added a new runtime option called -discover. This tells the script t
 
 The next option I want to add is something suggested on the app discusion page…a way to ignore sites. It shouldn’t be a problem to add this, as I’m already pulling out duplicates, I just need to decide the best way to set an ignore list. My first impulse is to copy the current -site/sites.conf approach with -igore:/ignore.conf. So, if you wanted to ignore a single site, you’d run spwakeup.exe -ignore:http://[site.domain.com](http://site.domain.com/). If you wanted to ignore a bunch of sites, you’d list them in a text file called ignore.conf. 
 
-I’m going to think on this for a day or two before committing myself. </div>
+I’m going to think on this for a day or two before committing myself. 
 
