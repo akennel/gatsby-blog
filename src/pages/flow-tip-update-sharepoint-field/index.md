@@ -3,7 +3,7 @@ title: MS Flow Tip - Updating field values in SharePoint without hard-coding the
 date: "2020-02-24"
 ---
 
-## A handy tip for using MS Flow and SharePoint when you don't want to hard-code the site's URL, but need to update a field value.
+## A handy tip for using MS Flow and SharePoint when you don't want to hard-code the site's URL, but need to update a field value
 
 <!-- end -->
 
@@ -19,25 +19,34 @@ You'll want to set up the action as a POST method, using your site URL variable 
 
 The URI is
 
-```
+```url
+
 _api/web/lists/GetByTitle('Your List Name')/items/getById(YourIDNumber)
+
+
 ```
 
 You'll need to add the following headers:
+
 ```json
+
 {
   "Accept": "application/json",
   "Content-Type": "application/json;odata=nometadata",
   "X-HTTP-Method": "MERGE",
   "IF-MATCH": "*"
 }
+
 ```
 
-And then finally in the Body of the request, place your fields with the new values as JSON: 
+And then finally in the Body of the request, place your fields with the new values as JSON:
+
 ```json
+
 {
     FieldName: "New Value"
 }
+
 ```
 
 Put together that will look something like this:

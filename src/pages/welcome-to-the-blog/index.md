@@ -8,7 +8,7 @@ Welcome to the new blog, I hope you enjoy your stay!
 
 <!-- end -->
 
-## New version of my site!
+## New version of my site
 
 I've been running a WordPress site for years now. Still available (for now!) at [Turtle Mafia](https://turtlemafia.org)
 
