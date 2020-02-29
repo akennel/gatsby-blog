@@ -11,15 +11,23 @@ import Wrapper from './Wrapper';
 
 function Header({ config }) {
   const { author, description, social } = config;
+  const headerStyle = {
+    display: "flex",
+    alignItems: "center"
+  }
 
   return (
     <Container>
       <Wrapper>
+        <div style={headerStyle}>
         {userConfig.showHeaderImage && (
           <HeaderImage/>
         )}
-        <H1><Link to="/">{author}</Link></H1>
-        <P>{description}</P>
+        <div>
+          <H1><Link to="/">{author}</Link></H1>
+          <P>{description}</P>
+        </div>
+        </div>
         {social &&
           <Social
             website={social.website}

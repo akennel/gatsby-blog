@@ -2,7 +2,7 @@ module.exports = {
   title: 'SharePoint Development', // Required
   author: 'Andrew Kennel', // Required
   description: 'Web Developer',
-  primaryColor: '#3498db', // Required
+  primaryColor: '#27658f', // Required
   showHeaderImage: true,
   showShareButtons: true,
   postsPerPage: 5, // Required
