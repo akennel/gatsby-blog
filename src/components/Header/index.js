@@ -13,7 +13,8 @@ function Header({ config }) {
   const { author, description, social } = config;
   const headerStyle = {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: "center"
   }
 
   return (
