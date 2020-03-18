@@ -7,7 +7,6 @@ featuredImage: './table.png'
 Gets the Site Collection Recycle Bin and displays it in a sortable/filterable table
 
 <!-- end -->
-![Recycle Bin Table](./table.png)
 
 So one of the great things about SharePoint is that deleted files are sent to a Recycle Bin instead of just being deleted. It makes it easy to recover from mistakes. Unfortunately, the Recycle Bin is sorted by deletion date, and there's not a great way to search for files.
 
