@@ -40,9 +40,11 @@ I've used React Table on several projects now, and just love it. It makes it ver
 }
 ```
 
+I'm converting the column data to a formatted string and then searching for that currently. In a future version I'll do the opposite, have the user enter a date via a date picker and then convert that to a date for matching.
+
 I'm also using [PNPJS v2](https://pnp.github.io/pnpjs/) for getting a handle on the Site and RootWeb. I'd love to use it for working with the Recycle Bin, but this version doesn't support the Recycle Bin at all (neither getting deleted items or restoring them), so I'm just making the REST API calls directly.
 
-The only thing even vaguely tricky was the need to get get and send an authentication digest when restoring the files.
+The only thing even vaguely tricky was the need to get and send an authentication digest when restoring the files.
 I adapted the [code](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) from Microsoft for JavaScript using the Axios library for making the actual call:
 
 ```javascript
