@@ -11,7 +11,7 @@ We're in the final stages of migration off an old on-prem 2010 server to SharePo
 
 We're migrating the InfoPath forms to PowerApps, and the list data we're migrating by dumping to CSV and uploading. The only missing link has been those lists that contain file attachments. To handle that, I created a simple console app that uses CSOM and PnP. If you've never tried it, the CSOM library will connect to a 2010 server, and (almost) everything works!
 
-The exception is unfortunately the AttachmentFiles property on List Items. But not to worry, there's a work-around that isn't too bad.
+One thing that doesn't work on 2010 is the AttachmentFiles property on List Items. But not to worry, there's a work-around that isn't too bad.
 You can access a list items attachments using the Folder class passing the item.Id:
 
 ```c
@@ -42,7 +42,7 @@ using (MemoryStream ms = new MemoryStream())
 MemoryStream newStream = new MemoryStream(b);
 var newAttachment = new AttachmentCreationInformation();
 newAttachment.ContentStream = newStream;
-newAttachment.FileName = fileName;
+newAttachment.FileName = file.ServerRelativeUrl.Substring(file.ServerRelativeUrl.LastIndexOf("/") + 1);
 ```
 
 SharePoint Online likes the FileAttachments property just fine, so at this point, you just add your new attachment.
