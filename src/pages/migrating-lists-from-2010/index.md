@@ -45,4 +45,4 @@ newAttachment.ContentStream = newStream;
 newAttachment.FileName = file.ServerRelativeUrl.Substring(file.ServerRelativeUrl.LastIndexOf("/") + 1);
 ```
 
-SharePoint Online likes the FileAttachments property just fine, so at this point, you just add your new attachment.
+SharePoint Online likes the FileAttachments property just fine, so at this point you just add your new attachment.
