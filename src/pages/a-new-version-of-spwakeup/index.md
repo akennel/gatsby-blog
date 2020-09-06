@@ -18,7 +18,7 @@ On Friday, I was supposed to be working with a department head to customize a si
 
 By the end of the day, my rewrite was running more or less error free. I headed home, and spent another couple of hours polishing up a few rough edges and putting in some error catching. The result is a much, much faster application. The time it takes to parse the site list has dropped to just a few seconds on my test box.
 
-I still have some work to do, especially with how the script handles being pointed at http://localhost, and how it reacts when it finds a Sub Site it doesn’t have access to. But, the new version is much better than the old, I think.
+I still have some work to do, especially with how the script handles being pointed at http://localhost, and how it reacts when it finds a Sub Site it doesn’t have access to. But, the new version is much better than the old, I think. 
 
 Tell me what you think. You can download a copy from [http://www.codeplex.com/spwakeup](http://www.codeplex.com/spwakeup)
 
