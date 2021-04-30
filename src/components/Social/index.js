@@ -93,7 +93,7 @@ function Social({ website, twitter, github, linkedin, train, plane }) {
       {plane && (
         <SocialLink href={plane} target="_blank" rel="noopener">       
 	   <img src={planeImgSrc} alt="Airport Parking" />
-	   Plane
+	   PHL Parking
         </SocialLink>
       )} 
   </Wrapper>
