@@ -4,8 +4,9 @@ import Wrapper from './Wrapper';
 import SocialLink from './SocialLink';
 
 import imgSrc from '../../SEPTAIcon.png';
+import planeImgSrc from '../../plane.png';
 
-function Social({ website, twitter, github, linkedin, train }) {
+function Social({ website, twitter, github, linkedin, train, plane }) {
   return (
     <Wrapper>
       {website && (
@@ -88,7 +89,13 @@ function Social({ website, twitter, github, linkedin, train }) {
 	   <img src={imgSrc} alt="Septa Train Schedule" />
 	   Train
         </SocialLink>
-      )}    
+      )}   
+      {plane && (
+        <SocialLink href={plane} target="_blank" rel="noopener">       
+	   <img src={planeImgSrc} alt="Airport Parking" />
+	   Plane
+        </SocialLink>
+      )} 
   </Wrapper>
   );
 }
