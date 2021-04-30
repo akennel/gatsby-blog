@@ -36,6 +36,7 @@ function Header({ config }) {
             twitter={social.twitter}
             linkedin={social.linkedin}
             train={social.train}
+            plane={social.plane}
           />
         }
       </Wrapper>
